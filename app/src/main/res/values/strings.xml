@@ -2,6 +2,23 @@
     <string name="app_name">TacoPronto</string>
     <string name="address">123 Euclid Ave</string>
     <string name="contact">Phone Number: 5623506072</string>
-    <string name="app_name">TacoPronto</string>
+    <string-array name="fillings">
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>White Fish</item>
+        <item>Cheese</item>
+        <item>Sea Food</item>
+        <item>Rice</item>
+        <item>Beans</item>
+        <item>Pico de Gallo</item>
+        <item>Guacamole</item>
+        <item>LBT</item>
+    </string-array>
+    <string-array name="bevrages">
+        <item>Soda</item>
+        <item>Cerveza</item>
+        <item>Margarita</item>
+        <item>Tequilla</item>
+    </string-array>
 
 </resources>

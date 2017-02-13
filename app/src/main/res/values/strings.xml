@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TacoPronto</string>
+    <string name="address">123 Euclid Ave</string>
+    <string name="contact">Phone Number: 5623506072</string>
+    <string name="app_name">TacoPronto</string>
+
 </resources>

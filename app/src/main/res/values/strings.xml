@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TacoPronto</string>
     <string name="address">123 Euclid Ave</string>
-    <string name="contact">Phone Number: 5623506072</string>
+    <string name="contact">Phone: 5623506072</string>
     <string-array name="fillings">
         <item>Beef</item>
         <item>Chicken</item>
@@ -20,5 +20,26 @@
         <item>Margarita</item>
         <item>Tequilla</item>
     </string-array>
+    <integer-array name="prices">
+        <item name="Large">4</item>
+        <item name="Medium">3</item>
+        <item name="Corn">3</item>
+        <item name="Flour">4</item>
+        <item name="beef">2</item>
+        <item name="chicken">1</item>
+        <item name="White Fish">2</item>
+        <item name="Cheese">3</item>
+        <item name="Sea Food">2</item>
+        <item name="Rice">1</item>
+        <item name="Beans">2</item>
+        <item name="Pico de Gallo">2</item>
+        <item name="Guacamole">3</item>
+        <item name="LBT">2</item>
+        <item name="Soda">2</item>
+        <item name="Cerveza">4</item>
+        <item name="Margarita">6</item>
+        <item name="Tequilla">5</item>
+
+    </integer-array>
 
 </resources>

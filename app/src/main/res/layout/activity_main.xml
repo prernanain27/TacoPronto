@@ -10,17 +10,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:weightSum="17">
+    android:background="@drawable/back2">
 
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_weight="3">
+   >
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:layout_weight="2"
 
         android:layout_alignParentTop="true"
@@ -35,16 +35,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="18dp"
+        android:textSize="22dp"
         android:layout_alignParentRight="true"
         android:id="@+id/tv1"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/address"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:layout_alignParentRight="true"
         android:layout_below="@id/tv1"
         android:id="@+id/tv2"
@@ -54,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/contact"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:layout_alignParentRight="true"
         android:layout_below="@id/tv2"
         android:layout_weight="1"/>
@@ -67,7 +68,7 @@
         android:orientation="horizontal"
         android:layout_below="@id/image"
         android:id="@+id/linear"
-        android:layout_weight="1">
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,7 +100,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="2"
         android:id="@+id/linear2"
         android:layout_below="@id/linear">
 
@@ -108,23 +108,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1"
+
        >
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/size">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Large"
                 android:id="@+id/large"
+                android:onClick="radioClick"
                 />
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Medium"
                 android:id="@+id/medium"
+                android:onClick="radioClick"
+                android:checked="true"
                 />
         </RadioGroup>
     </LinearLayout>
@@ -136,18 +141,22 @@
            >
             <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/base">
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Corn"
                     android:id="@+id/corn"
+                    android:onClick="baseSelection"
+                    android:checked="true"
                     />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Flour"
                     android:id="@+id/flour"
+                    android:onClick="baseSelection"
                     />
             </RadioGroup>
         </LinearLayout>
@@ -155,7 +164,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_below="@id/linear2">
         <TextView
             android:layout_width="match_parent"
@@ -169,11 +177,12 @@
 
     <GridView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:layout_height="fill_parent"
         android:id="@+id/gridView"
         android:choiceMode="multipleChoice"
-        android:numColumns="auto_fit">
+        android:numColumns="auto_fit"
+        android:layout_weight="30"
+        >
 
     </GridView>
 
@@ -181,7 +190,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bevrages"
-        android:layout_weight="1"
         android:textSize="14dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -190,10 +198,10 @@
     <GridView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
         android:id="@+id/gridView2"
         android:choiceMode="multipleChoice"
-        android:numColumns="auto_fit">
+        android:numColumns="auto_fit"
+        android:layout_weight="8">
 
     </GridView>
 
@@ -201,7 +209,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Button"
-        android:layout_weight="2"
         android:text="Place Your Order"
         android:onClick="onClick"
         android:layout_gravity="center"

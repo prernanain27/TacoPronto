@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillViewport="true"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:fadeScrollbars="false">
+   >
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -174,7 +174,6 @@
             android:gravity="center"
             android:background="@drawable/border_shape"/>
     </LinearLayout>
-
     <GridView
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
@@ -182,10 +181,15 @@
         android:choiceMode="multipleChoice"
         android:numColumns="auto_fit"
         android:layout_weight="30"
+        android:scrollbarFadeDuration="100"
+        android:isScrollContainer="false"
+        android:layout_margin="15dp"
+        android:verticalScrollbarPosition="left"
+        android:fadeScrollbars="false"
+        android:nestedScrollingEnabled="true"
         >
 
     </GridView>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -194,6 +198,10 @@
         android:textStyle="bold"
         android:gravity="center"
         android:background="@drawable/border_shape"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10">
 
     <GridView
         android:layout_width="wrap_content"
@@ -201,9 +209,10 @@
         android:id="@+id/gridView2"
         android:choiceMode="multipleChoice"
         android:numColumns="auto_fit"
-        android:layout_weight="8">
+        >
 
     </GridView>
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"

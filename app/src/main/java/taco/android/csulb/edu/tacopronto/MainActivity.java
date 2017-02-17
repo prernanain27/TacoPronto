@@ -51,16 +51,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Getting array from resources and making new array
         fillings = getResources().getStringArray(R.array.fillings);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, fillings);
         grid = (GridView) findViewById(R.id.gridView);
         grid.setAdapter(adapter);
         fill = new int[grid.getCount()];
+        // For setting all checkboxes unchecked when app run initially
         for (int i=0; i<adapter.getCount();i++){
             fill[i]=0;
             grid.setItemChecked(i,false);
         }
-
+        // For handling the listener of gridviews.
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+// For handling the clicks of radio buttons
     public void radioClick(View v){
         switch (v.getId()){
             case R.id.large:
@@ -131,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
+// On button click
     public void onClick(View v){
         description =" A "+ size_desc +"Taco with the base of" + base_desc + " and filled with following items :";
         int[] pricelist= getResources().getIntArray(R.array.prices);
@@ -162,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendSms( int price , String description)
     {
+        //For checking whether user has granted the permission to send messages.
        if( ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)== PackageManager.PERMISSION_GRANTED)
        {
            try {
